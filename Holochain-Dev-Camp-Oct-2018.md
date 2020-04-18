@@ -1,4 +1,4 @@
-# Holochain DevCamp Alpha Notes Oct 2018 - Dermot Doherty
+# Holochain DevCamp Alpha Notes, Oct 2018 - Dermot Doherty
 
 ## Holochain DevCamp Team
 - Mickki - Operations
@@ -10,7 +10,7 @@ These agreements are encoded in the validation rules (DNA) which are checked bef
 If you commit things to your chain, or try to publish things which don't comply with the validation rules, the rest of the network/DHT rejects it.
 
 ## Holochain App (hApp)
-- Entries - Each unit of data is an entry and has an entry type
+- Entries - Each unit of data is an entry and has an entry type.
 Configure schema for a task entry
 - Zomes - A Zome is a place where we define logical schemas (entry types) and functions.
 Inputs need to be valid
@@ -20,27 +20,29 @@ https://developer.holochain.org/
 
 ## Holochain API
 
-Hoochain API functions can called from our JavaScript Zome
+Holochain API functions can be called from our JavaScript Zome
 https://developer.holochain.org/API
 
-- Commit - Write to local src chain  
+- Commit - Write to local src chain
+```
       entryType: string
       entryData: any-type
 
       Returns: hash-string OR error
+```
 
 - Get - Get from local src chain
 
-TypeScript
-Holochain TypeScript Template Repo
+### TypeScript
+See Holochain TypeScript Template Repo
 
 ## Linking
-Distrbute Hash Table - When your data gets gossiped out to the DHT (your peers).
-Need to be able ot retrieve data from across the network.
+Distrbuted Hash Table - When your data gets gossiped out to the DHT (your peers).
+Need to be able to retrieve data from across the network.
 Create links between different entries on the DHT.
 Link has a base (hash of entry), a Link (a target - has of entry that it's to), tag (string describes relationship between the 2 things)
 Used to create a graph within the DHT.
-App.Key.Hash is an identifier for the current user.
+`App.Key.Hash` is an identifier for the current user.
 
 `Links` is a special datatype within Holochain
 
@@ -255,7 +257,7 @@ http://ceptr.org/whitepapers/mutual-credit
 - [(Medium) Holo’s ERC20 token (HOT) and Mutual Credit Cryptocurrency (Holo fuel)](https://medium.com/h-o-l-o/holos-erc20-token-hot-and-mutual-credit-cryptocurrency-holo-fuel-6d8b6d3938d6)
 - https://github.com/Holochain/holochain-proto/wiki/FAQ#how-is-holochain-different-from-a-dht-distributed-hash-table
 
-# Questions for Joel
+# Questions
 1) How to connect 2 peers on 2 different machines to the same app/holochain? What is the correct command to get us into the same app and into the same table in the bootstrap server?
 Here is some output from our testing.
 
